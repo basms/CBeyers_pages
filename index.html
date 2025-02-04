@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Corne Beyers - Online Curriculum Vitae</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Corne Beyers</h1>
+            <p>Musician | Tech enthusiast | Future Data-Scientist</p>
+        </header>
+        <img src = 
+        'images/B1121E47-93C4-4BA9-9F77-DBAE96BF2853_1_105_c.jpeg'
+        alt="User Photo">
+
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Hi! I'm Corne Beyers! I'm an musicians and aspiring Data Scientist. This page serves to showcase my personal and professional info!</p>
+                <p>From the information below, I am sure you will be able to see that I have interests in many areas, that I am goal oriented and that I work hard to achieve what I want.</p>
+            </section>
+
+            <section id="qualifications">
+                <h3>Qualifications</h3>
+                <ul>
+                    <li>Achieved a 90% average in the National Senior Certificate (2020) from Highschool Jim Fouche.</li>
+                    <li>Bachelor of Music in Performance (Cum Laude, 2024) from Stellenbosch University.</li>
+                </ul>
+            </section>
+
+            <section id="achievements">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>Concertmaster, Free State Youth Orchestra (2017).</li>
+                    <li>Concertmaster, University of Stellenbosch Symphony Orchestra (2023, 2024).</li>
+                </ul>
+            </section>
+    
+            <section id="interests">
+                <h3>Interests</h3>
+                <p>While music is a great passion of mine, I also enjoy:</p>
+                <ul>
+                    <li>Aviation</li>
+                    <li>Technology, including software engineering and Raspberry Pi projects</li>
+                    <li>Nature - hiking and beach holidays</li>
+                </ul>
+            </section>
+    
+            <section id="future">
+                <h3>Future Endeavors</h3>
+                <p>Starting in 2025, I plan to pursue an undergraduate degree in Data Science with a focus on Computer Science. I am excited to immerse myself in this field and explore its vast possibilities over the next four years.</p>
+            </section>
+    
+            <section id="contact">
+                <h3>Contact</h3>
+                <p>Feel free to reach out to me at <a href="mailto:cornebeyers0101@gmail.com">cornebeyers0101@gmail.com</a> or send me a message below.</p>
+            </section>
+
+            <!--This Website greatly helped me understand forms better:
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search-->
+            <section>
+                <!--Search Bar to search for keywords-->
+                <h4>Search for Keywords</h4>
+                <form action="/index.html" method="get">
+                    <label for="query">Search:</label>
+                    <input type="text" id="query" name="q" placeholder="Enter keywords" required>
+                    <button type="submit">Search</button>
+                </form>
+            </section>
+
+            <section>
+                <!--Contact form-->
+                <h4>Send a message</h4>
+                <form action="/index.html" method="post">
+                    
+                    <!--Enter user's name-->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br>
+
+                    <!--Enter User's Email-->
+                    <label for="email">Email address:</label>
+                    <input type="text" id="email" name="email"><br>
+
+                    <!--Enter the users message-->
+                    <label for="message">Enter your message:</label>
+                    <input type="text" id="message" name="message"><br>
+
+                    <!--Button to submit the message-->
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
+
+<!--Search bar Response example:
+=== Request line ===
+GET /index.html?query=example+keyword HTTP/1.1
+
+=== Headers ===
+Host: example.com
+User-Agent: Chromium/134.0.6958.2 (Windows NT 10.0; Win64; x64)
+
+=== Body ===
+No content in body since content has been sent through URL
+-->
+
+<!--Contact form response example
+=== Request line ===
+POST /index.html HTTP/1.1
+
+=== Headers ===
+Host: example.com
+User-Agent: Chromium/134.0.6958.2 (Windows NT 10.0; Win64; x64)
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+=== Body ===
+name=example_person
+email=example@email.com
+message=This_is_an_example_message
+-->
